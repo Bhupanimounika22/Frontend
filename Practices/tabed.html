@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content</title>
+   <style>
+   
+.tabs {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.tab-button {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.active-tab {
+    display: block;
+}
+
+   </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" data-tab="tab1">Tab 1</button>
+        <button class="tab-button" data-tab="tab2">Tab 2</button>
+        <button class="tab-button" data-tab="tab3">Tab 3</button>
+    </div>
+
+    <div class="tab-content" id="tab1">
+        <h2>My name is Tab1</h2>
+        <p>Hey Hola...! :]</p>
+    </div>
+
+    <div class="tab-content" id="tab2">
+        <h2>This is Tab 1</h2>
+        <p>Welcome to Tab1 :].</p>
+    </div>
+
+    <div class="tab-content" id="tab3">
+        <h2>Finally I am Tab3</h2>
+        <p>This is  Tab 3 :].</p>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+
+ 
+function showTab(tabId) {
+     tabContents.forEach(content => {
+        content.style.display = "none";
+    });
+
+     const selectedTab = document.getElementById(tabId);
+    selectedTab.style.display = "block";
+}
+
+ tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+         const tabId = button.getAttribute("data-tab");
+
+         showTab(tabId);
+
+         tabButtons.forEach(tabButton => {
+            tabButton.classList.remove("active-tab");
+        });
+
+         button.classList.add("active-tab");
+    });
+});
+
+ showTab("tab1");
+
+    </script> 
+</body>
+</html>

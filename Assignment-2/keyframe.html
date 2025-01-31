@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .animated-div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    animation: animateElement 4s infinite;
+    margin-left: 500px;
+    margin-top: 350px;
+  }
+
+  @keyframes animateElement {
+    0% {
+      transform: translateX(0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translateX(200px) rotate(90deg) scale(1.5);
+    }
+    50% {
+      transform: translateX(200px) rotate(180deg) scale(0.5);
+    }
+    75% {
+      transform: translateX(0) rotate(270deg) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) rotate(360deg) scale(1);
+    }
+  }
+</style>
+<title>Transform Animation</title>
+</head>
+<body>
+  <div class="animated-div"></div>
+</body>
+</html>

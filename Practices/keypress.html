@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Key Press Game</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin: 50px auto;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0b671c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .message {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <h1>Key Press Game</h1>
+        <p>Press the <span id="target-key">Spacebar</span> within <span id="time-limit">5</span> seconds!</p>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div class="message" id="message"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const targetKey = " ";  
+            const timeLimit = 5;  
+            let gameStarted = false;
+        
+            const targetKeyElement = document.getElementById("target-key");
+            const timeLimitElement = document.getElementById("time-limit");
+            const messageElement = document.getElementById("message");
+            const startButton = document.getElementById("start-button");
+        
+            startButton.addEventListener("click", function () {
+                if (!gameStarted) {
+                    gameStarted = true;
+                    startButton.disabled = true;
+                    const startTime = Date.now();
+                    targetKeyElement.textContent = targetKey;
+                    timeLimitElement.textContent = timeLimit;
+        
+                    const timer = setInterval(function () {
+                        const currentTime = Date.now();
+                        const elapsedTime = (currentTime - startTime) / 1000;
+        
+                        if (elapsedTime >= timeLimit) {
+                            clearInterval(timer);
+                            gameStarted = false;
+                            startButton.disabled = false;
+                            messageElement.textContent = "Time's up! You lost.";
+                        }
+                    }, 100);
+        
+                    document.addEventListener("keydown", function (event) {
+                        if (event.key === targetKey && gameStarted) {
+                            clearInterval(timer);
+                            gameStarted = false;
+                            startButton.disabled = false;
+                            messageElement.textContent = "Congratulations! You pressed the key in time.";
+                        }
+                    });
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>

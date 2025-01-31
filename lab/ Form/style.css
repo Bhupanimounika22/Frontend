@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(176, 101, 229) ;
+    
+}
+.container{
+    width: 600px;
+    height: 700px;
+    background-color: white;
+    margin: 100px auto;
+    padding: 60px;
+}
+.container .title{
+    font-size: 16pt;
+    margin-bottom: 30px;
+     color: rgb(201, 112, 226);
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: 600;
+
+}
+.container .cont{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+.container .cont label{
+    width: 200px;
+
+ 
+ }
+.container .cont input{
+    width: 200px;
+
+    height: 25px;
+    border: 1px solid rgb(199, 154, 217);
+}
+.container .cont select{
+    width: 200px;
+    border: 1px solid rgb(199, 154, 217);
+
+   
+}
+.container .cont button{
+    width: 600px;
+    height: 50px;
+    border: none;
+    background-color: rgb(219, 101, 227);
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+#check{
+    width: 160px;
+ }
+.rad{
+    position: relative;
+}

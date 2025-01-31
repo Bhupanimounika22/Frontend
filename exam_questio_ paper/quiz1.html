@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #quiz-container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .choice-container {
+            margin-top: 20px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+  
+</head>
+<body>
+    <div id="quiz-container">
+        <h1 id="question"></h1>
+        <div id="choices" class="choice-container"></div>
+        <button id="submit-button">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Define your quiz questions, answer choices, and correct answers as an array of objects
+const quizQuestions = [
+{
+    question: "What is the capital of France?",
+    choices: ["London", "Madrid", "Paris", "Rome"],
+    correctAnswer: "Paris"
+},
+{
+    question: "Which planet is known as the Red Planet?",
+    choices: ["Venus", "Mars", "Jupiter", "Saturn"],
+    correctAnswer: "Mars"
+},
+{
+    question: "What is the largest mammal on Earth?",
+    choices: ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    correctAnswer: "Blue Whale"
+}
+];
+
+// Initialize variables to keep track of the current question and score
+let currentQuestionIndex = 0;
+let score = 0;
+
+// Function to display the current question
+function displayQuestion() {
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+
+const currentQuestion = quizQuestions[currentQuestionIndex];
+questionElement.textContent = currentQuestion.question;
+
+choicesElement.innerHTML = "";
+
+currentQuestion.choices.forEach((choice, index) => {
+    const choiceButton = document.createElement("button");
+    choiceButton.textContent = choice;
+    choiceButton.addEventListener("click", () => checkAnswer(choice));
+    choicesElement.appendChild(choiceButton);
+});
+}
+
+// Function to check the user's answer
+function checkAnswer(userChoice) {
+const currentQuestion = quizQuestions[currentQuestionIndex];
+
+if (userChoice === currentQuestion.correctAnswer) {
+    score++;
+}
+
+currentQuestionIndex++;
+
+if (currentQuestionIndex < quizQuestions.length) {
+    displayQuestion();
+} else {
+    displayResult();
+}
+}
+
+// Function to display the quiz result
+function displayResult() {
+const resultElement = document.getElementById("result");
+resultElement.textContent = `You scored ${score} out of ${quizQuestions.length}!`;
+}
+
+// Event listener for the submit button
+const submitButton = document.getElementById("submit-button");
+submitButton.addEventListener("click", displayQuestion);
+
+// Initial display of the first question
+displayQuestion();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Loan Application</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(147, 203, 226);
+  }
+  .container {
+     
+    max-width: 600px;
+    margin-top: 90px;
+    margin-left: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .content {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="number"] {
+    width: 570px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+  }
+  button:hover{
+    background-color: green;
+    color: white;
+    transform: scale(0.9);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Education Loan Application</h2>
+  <div class="content">
+    <p>Our bank is dedicated to supporting your educational aspirations. We offer education loans with competitive interest rates and flexible repayment options.</p>
+    <p>Please provide your details in the form below to apply for an education loan. Our team will review your application and get back to you soon.</p>
+  </div>
+  <form action="http://127.0.0.1:5500/lab/assignment1/submit.html">
+    <div class="form-group">
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full-name" required>
+    </div>
+    <div class="form-group">
+      <label for="course-name">Course Name:</label>
+      <input type="text" id="course-name" name="course-name" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-amount">Loan Amount ($):</label>
+      <input type="number" id="loan-amount" name="loan-amount" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-term">Loan Term (years):</label>
+      <input type="number" id="loan-term" name="loan-term" required>
+    </div>
+    <div class="form-group">
+      <label for="institution">Educational Institution:</label>
+      <input type="text" id="institution" name="institution" required>
+    </div>
+    <button type="submit">Apply Now</button>
+  </form>
+</div>
+</body>
+</html>

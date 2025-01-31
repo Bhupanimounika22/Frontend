@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Browsing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://static01.nyt.com/images/2022/01/16/fashion/VIRAL-LIBRARY/VIRAL-LIBRARY-superJumbo.jpg');
+        }
+
+        .container {
+            position: relative;
+            top: 125px;
+            background-color: rgb(88, 46, 13);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e38202;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(221, 118, 7, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 550px;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+        height: 40px;
+       
+        background-color:rgb(232, 117, 24) ;
+        color: white;
+        font-weight: 700;
+        font-size: 13pt;
+        border: none;
+        border-radius: 10px;
+        }
+
+        button.cancel {
+            background-color: #a0831c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: white; text-align:center;">Book Browsing</h1>
+        <form id="book-search-form">
+            <div class="form-group">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="authors">Authors:</label>
+                <input type="text" id="authors" name="authors">
+            </div>
+            <div class="form-group">
+                <label for="publisher">Publisher:</label>
+                <input type="text" id="publisher" name="publisher">
+            </div>
+            <div class="form-group">
+                <label for="edition">Edition:</label>
+                <input type="text" id="edition" name="edition">
+            </div>
+            <div class="form-group">
+                <label for="book-no">Book Number:</label>
+                <input type="text" id="book-no" name="book-no">
+            </div>
+            <div class="button-container">
+                <button type="button" id="search-button">Search</button>
+                <button type="button" class="cancel" id="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const searchButton = document.getElementById('search-button');
+        const cancelButton = document.getElementById('cancel-button');
+        const bookSearchForm = document.getElementById('book-search-form');
+
+        searchButton.addEventListener('click', () => {
+             const title = document.getElementById('title').value;
+            const authors = document.getElementById('authors').value;
+            const publisher = document.getElementById('publisher').value;
+            const edition = document.getElementById('edition').value;
+            const bookNo = document.getElementById('book-no').value;
+
+             console.log('Searching...');
+        });
+
+        cancelButton.addEventListener('click', () => {
+             bookSearchForm.reset();
+        });
+    </script>
+</body>
+</html>

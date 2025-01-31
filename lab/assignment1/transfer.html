@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+   
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(171, 118, 233);
+  }
+
+  .status-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    display: none;
+  }
+
+  .status {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .status-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .processing {
+    color: #007bff;
+  }
+
+  .pending {
+    color: #ffc107;
+  }
+
+  .complete {
+    color: #28a745;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+</style>
+<title>Money Transfer Animation</title>
+</head>
+<body>
+  <div class="status-container processing" style="animation: fadeIn 1s ease-in 1s, slideInRight 1s ease-in;">
+    <div class="status-icon">&#128259;</div>
+    <div class="status">Processing</div>
+  </div>
+
+  <div class="status-container pending" style="animation: fadeIn 1s ease-in 7s, slideInRight 1s ease-in 7s;">
+    <div class="status-icon">&#9203;</div>
+    <div class="status">Pending</div>
+  </div>
+
+  <div class="status-container complete" style="animation: fadeIn 1s ease-in 13s, slideInRight 1s ease-in 13s;">
+    <div class="status-icon">&#10004;</div>
+    <div class="status">Payment Complete</div>
+  </div>
+
+  <script>
+    // Display each stage with a delay
+    setTimeout(() => {
+      document.querySelector('.processing').style.display = 'block';
+    }, 2000);
+
+    setTimeout(() => {
+      document.querySelector('.pending').style.display = 'block';
+    }, 6000);
+
+    setTimeout(() => {
+      document.querySelector('.complete').style.display = 'block';
+    }, 10000);
+  </script>
+</body>
+</html>

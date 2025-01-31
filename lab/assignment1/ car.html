@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Loan Application</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(147, 203, 226);
+  }
+  .container {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    max-width: 700px;
+    margin:auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .container:hover{
+    transform: scale(1.1);
+  }
+  .content {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input{
+    width: 670px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  input[type="number"] {
+    width: 670px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  button:hover{
+    background-color: green;
+    color: white;
+    transform: scale(0.9);
+    
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Car Loan Application</h2>
+  <div class="content">
+    <p>Welcome to our bank's car loan service. We offer competitive interest rates and flexible repayment options for your car financing needs.</p>
+    <p>Simply fill out the form below to apply for a car loan with us. Our team will review your application and get in touch with you.</p>
+  </div>
+  <form action="http://127.0.0.1:5500/lab/assignment1/submit.html">
+    <div class="form-group">
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full-name" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-amount">Loan Amount:</label>
+      <input type="number" id="loan-amount" name="loan-amount" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-term">Loan Term (years):</label>
+      <input type="number" id="loan-term" name="loan-term" required>
+    </div>
+    <div class="form-group">
+      <label for="down-payment">Down Payment:</label>
+      <input type="number" id="down-payment" name="down-payment" required>
+    </div>
+    <div class="form-group">
+      <label for="credit-score">Credit Score:</label>
+      <select id="credit-score" name="credit-score" required>
+        <option value="">Select...</option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="fair">Fair</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+    <button type="submit">Apply Now</button>
+  </form>
+</div>
+</body>
+</html>

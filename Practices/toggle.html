@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+
+    }
+    label{
+        display: inline-block;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 13pt;
+        padding: 20px;
+    }
+    div{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        background-color: gray;
+        width: 400px;
+        height: 200px;
+    }
+    form{
+        position: relative;
+        top: 25%;
+        left: 10%;
+    }
+    #pswd{
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    #check{
+        position: absolute;
+        left: 80px;
+        top: 67%;
+    }
+    .pws{
+        margin-left: 80px;
+    }
+    
+</style>
+<body>
+    <div> 
+        <form> 
+
+            <label>Password:</label>
+            <input type="password" required id="pswd"><br>
+            <input type="checkbox" id="check" onclick="myFunction()">
+            <label class="pws">Show Password</label>
+        
+        </form>
+    </div>
+    <script>
+          function myFunction(){
+            var check =document.getElementById('pswd');
+            if (check.type === "password") {
+                check.type = "text";
+                check.style.fontFamily="times";
+                check.style.fontSize='16pt';
+              } else {
+                check.type = "password";
+                
+              }
+         }
+    </script>
+</body>
+</html>

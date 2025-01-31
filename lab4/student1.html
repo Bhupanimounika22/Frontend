@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            
+        }
+        
+        .login-container {
+            position: relative;
+            top: 200px;
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+              background-color:#2980B9;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 350px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+        
+        .button1{
+            padding: 10px 20px;
+            background-color: #3dd226;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button2{
+            padding: 10px 20px;
+            background-color: #e72514;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .links-container {
+            margin-top: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            margin: 0 10px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    
+        
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Student Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="button-container">
+                <button  id="login-btn"  class="button1" onclick="validate()"> Login</button>
+                <button type="reset" id="cancel-btn" class="button2">Cancel</button>
+            </div>
+
+            <div class="links-container">
+                <a href="#" id="forgot-password-link" style="color:white">Forgot Password?</a>
+                <a href="#" id="signup-link" style="color:white">Sign Up</a>
+            </div>
+
+         </form>
+    </div>
+    <script>
+       
+         
+        function validate(){
+             location.assign('main.html')
+              }  
+
+
+     
+         
+        
+    </script>
+</body>
+</html>

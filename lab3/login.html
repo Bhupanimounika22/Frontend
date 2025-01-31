@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            background-color: rgb(246, 203, 149);
+        }
+        .container{
+            position: relative;
+            top: 100px;
+            left:65px;
+            background-color: bisque;
+            width: 1300px;
+            height: 600px;
+        }
+        .img1{
+            width: 500px;
+            position: absolute;
+            top: 125px;
+            left: 100px;
+            border-radius: 20px;
+
+        }
+        .img2{
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            top: 125px;
+            left: 700px;
+            border-radius: 20px;
+        }
+        .form{
+            position: absolute;
+            top: 17%;
+            left: 30%;
+            background-color: white;
+            border-radius: 20px;
+            width: 500px;
+            height: 400px;
+            
+        
+        }
+        label{
+            color:  rgb(232, 117, 24);
+            position: relative;
+            top: 20px;
+            left: 200px;
+            display: flex;
+           font-size: 20px;
+        }
+        #name{
+            position: relative;
+            top: 10px;
+            left: 100px;
+           text-align: center;
+           color: gray;
+           font-size: 14pt;
+           font-family: 'Times New Roman', Times, serif;
+            width: 300px;
+            height: 30px;
+        }
+        #pwd{
+            position: relative;
+            top: 10px;
+            left: 100px;
+            text-align: center;
+            color: gray;
+            font-size: 14pt;
+            font-family: 'Times New Roman', Times, serif; 
+            
+            width: 300px;
+            height: 30px;
+        }
+       
+    .btn{
+        width: 100px;
+        height: 40px;
+        position: relative;
+        top: 40px;
+        left: 100px;
+        background-color:rgb(232, 117, 24) ;
+        color: white;
+        font-weight: 700;
+        font-size: 13pt;
+        border: none;
+        border-radius: 10px;
+    }
+    h1{
+        color:rgb(232, 117, 24) ;
+        text-align: center;
+    }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div><img  class="img1"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8fphuBZFWpgVrMLV7lnm9VhWkRAJ076lDUA&usqp=CAU" alt=""></div>
+    <div><img  class="img2"  src="https://media.istockphoto.com/id/1015149600/photo/book-hall-in-library.jpg?s=612x612&w=0&k=20&c=DzbHaOg_iLwRAU96BzzpZ7a70xCGj3XBTVQ_HmqiN3A=" alt=""></div>
+    <div class="form">
+        <h1>Login</h1>
+        <form action="">
+            <label for="username">Username:</label><br><input type="text" name="username" id="name" placeholder="Username" required> 
+            <label for="password">Password:</label><br><input type="password" name="pwd" id="pwd" placeholder="Password" required> <br>
+            <label for="usertype">User type: </label><br><label for="student"> Student<input type="radio" name="student" id="std" required>  
+         Faculty  <input type="radio" name="student" id="fac"><br></label>
+            <button class="btn" type="reset">Reset</button>
+            <button class="btn">Login</button>
+             
+        </form>
+        
+ 
+    </div>
+
+</div>
+ 
+    
+</body>
+</html>

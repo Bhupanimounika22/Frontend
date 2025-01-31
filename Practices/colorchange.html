@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic CSS for styling the game elements */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .game-square {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+    <title>Color Change Game</title>
+</head>
+<body>
+    <h1>Color Change Game</h1>
+    <p>Click on the squares with the correct color within the time limit.</p>
+
+    <div id="game-container"></div>
+
+    <script>
+        const gameContainer = document.getElementById("game-container");
+        const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+        let score = 0;
+        let timeLeft = 5;
+
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function createGameSquare() {
+            const square = document.createElement("div");
+            square.classList.add("game-square");
+            square.style.backgroundColor = getRandomColor();
+
+            square.addEventListener("click", function () {
+                if (square.style.backgroundColor === "red") {
+                    score++;
+                } else {
+                    score--;
+                }
+
+                updateScore();
+                createGameSquare();
+                gameContainer.removeChild(square);
+            });
+
+            gameContainer.appendChild(square);
+        }
+
+        function updateScore() {
+            const scoreElement = document.createElement("p");
+            scoreElement.textContent = `Score: ${score}`;
+            document.body.appendChild(scoreElement);
+        }
+
+        function updateTimer() {
+            const timerElement = document.createElement("p");
+            timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+
+            const timerInterval = setInterval(function () {
+                timeLeft--;
+
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    alert(`Game Over! Your final score is ${score}`);
+                    gameContainer.innerHTML = "";
+                    score = 0;
+                    timeLeft = 30;
+                    updateScore();
+                    createGameSquare();
+                    updateTimer();
+                } else {
+                    timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+                }
+            }, 1000);
+
+            document.body.appendChild(timerElement);
+        }
+
+        createGameSquare();
+        updateScore();
+        updateTimer();
+    </script>
+</body>
+</html>

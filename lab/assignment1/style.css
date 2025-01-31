@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        rgb(244, 243, 243)  0%,
+        rgb(244, 243, 243) 50%,
+        rgb(251, 241, 241) 50%,
+        rgb(251, 240, 240) 100%
+    );
+}
+.container{
+    height: 60px;
+    background: linear-gradient(
+        to right,
+        rgb(108, 27, 201) 0%,
+        rgb(108, 27, 201) 50%,
+        rgb(39, 161, 210) 50%,
+        rgb(41, 174, 227) 100%
+        );
+
+}
+.pre1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+    position: relative;
+    top: 20%;
+   
+    color: white;
+    font-weight: 900;
+    
+}
+.container1{
+    width: 250px;
+    height: 35px;
+    background-color: rgb(12, 12, 78);
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    top: 7%;
+    left: 40%;
+}
+h4{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+.container2 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(108, 27, 201);
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+   
+  }
+  .container3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 27, 201);
+    border-radius:10px;
+  }
+  .para1{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+  .container4 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(108, 27, 201);
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+   
+  }
+  .container5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 27, 201);
+    border-radius:10px;
+  }
+  .para2{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+  .container6 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(108, 27, 201);
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top:75%;
+    left: 10%;
+   
+  }
+  .container7{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(108, 27, 201);
+    border-radius:10px;
+  }
+  .para3{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+ 
+.line{
+width: 1px;
+height: 754px;
+background-color: gray;
+position: absolute;
+top: 11%;
+left: 50%;
+}
+.cont1 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(39, 161, 210) ;
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+   
+  }
+  .cont2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(39, 161, 210) ;
+    border-radius:10px;
+  }
+  .paraa1{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+  .cont3 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(39, 161, 210) ;
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+   
+  }
+  .cont4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(39, 161, 210) ;
+    border-radius:10px;
+  }
+  .paraa2{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+  .cont5 {
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(39, 161, 210) ;
+    border-radius:10px;
+    margin-left: 30px;
+    position: absolute;
+    top: 75%;
+    left: 60%;
+   
+  }
+  .cont6{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(39, 161, 210);
+    border-radius:10px;
+  }
+  .paraa3{
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+    font-size: 16pt;
+  }
+ .h5{
+    color: rgb(108, 27, 201);
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 50px;
+   margin-left: 300px;
+ }
+ .head{
+    color: rgb(39, 161, 210);
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 20px;
+    margin-left: 1000px;
+    
+ }
+ .head1{
+    position: absolute;
+    top:5%;
+    left: 45%;
+    color: rgb(152, 84, 224);
+    font-size: 17pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+ }
+ 
+ 
+ .pre2{
+    position: absolute;
+    left: 28%;
+    top: 40%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+  .head4{
+    position: absolute;
+    top:5%;
+    left: 45%;
+    color: rgb(39, 161, 210);
+    font-size: 17pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+ }
+ .pre2 a{
+    color: rgb(97, 97, 224);
+ }

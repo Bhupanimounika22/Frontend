@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic CSS for styling the navigation menu and submenus */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #0c0c0b;
+            color: #fff;
+            width: 700px;
+            margin-top: 300px;
+            margin-left: 400px;
+            height: 60px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+       
+                  }
+
+        nav ul li {
+            position: relative;
+            cursor: pointer;
+            margin-top: 10px;
+
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+        
+            
+        }
+
+        nav ul li ul li {
+            display: block;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+    <title>Dropdown Menu</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="home">
+                <a href="#">Home</a>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign UP</a></li>
+                    <li><a href="#">Make Email</a></li>
+                </ul>
+            </li>
+            <li id="services">
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li id="about">
+                <a href="#">About Us</a>
+                 
+                    <ul>
+                        <li><a href="#">How we Develop</a></li>
+                        <li><a href="#">How we Started</a></li>
+                        <li><a href="#">Economics</a></li>
+                    </ul>
+                 
+            </li>
+            <li id="contact">
+                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">Phone number:987*****34</a></li>
+                    <li><a href="#">Email:economics@gmail.com</a></li>
+                    <li><a href="#">Instagram:eco_5464@mic</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll("nav ul li");
+
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener("mouseenter", function () {
+                    const submenu = this.querySelector("ul");
+                    if (submenu) {
+                        submenu.style.display = "block";
+                    }
+                });
+
+                menuItem.addEventListener("mouseleave", function () {
+                    const submenu = this.querySelector("ul");
+                    if (submenu) {
+                        submenu.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

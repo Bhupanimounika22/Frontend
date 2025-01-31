@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        button{
+            width: 250px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: hotpink;
+            position: absolute;
+            top: 50%;
+            left: 43.5%;
+            color: white;
+
+        }
+        h1{
+            position: absolute;
+            top: 60%;
+            left: 52%;
+            width: 200px;
+            height: 50px;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <button class="button"  onClick="onClick()">Click me</button>
+    <h1 id="clicks">0</h1> 
+ </body>
+<script>
+    var clicks = 0;
+
+    function onClick() {
+      clicks += 1;
+      document.getElementById("clicks").innerHTML = clicks;
+    }
+</script>
+</html>

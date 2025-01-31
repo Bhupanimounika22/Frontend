@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Loan Application</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(147, 203, 226);
+  }
+  .container {
+    max-width: 600px;
+   margin-top: 70px;
+   margin-left: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .content {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="number"] {
+    width: 570px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  button{
+    background-color: green;
+    color: white;
+  }
+  button:hover{
+    transform: scale(0.9);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Home Loan Application</h2>
+  <div class="content">
+    <p>Our bank offers flexible home loan options to help you achieve your dream of owning a home. We provide competitive interest rates and repayment plans.</p>
+    <p>Fill out the form below to apply for a home loan. Our team will review your application and get in touch with you.</p>
+  </div>
+  <form action="http://127.0.0.1:5500/lab/assignment1/submit.html">
+    <div class="form-group">
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" name="full-name" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-amount">Loan Amount :</label>
+      <input type="number" id="loan-amount" name="loan-amount" required>
+    </div>
+    <div class="form-group">
+      <label for="loan-term">Loan Term (years):</label>
+      <input type="number" id="loan-term" name="loan-term" required>
+    </div>
+    <div class="form-group">
+      <label for="property-type">Property Type:</label>
+      <select id="property-type" name="property-type" required>
+        <option value="">Select...</option>
+        <option value="house">House</option>
+        <option value="apartment">Apartment</option>
+        <option value="condo">Condo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="credit-score">Credit Score:</label>
+      <input type="number" id="credit-score" name="credit-score" required>
+    </div>
+    <button type="submit">Apply Now</button>
+  </form>
+</div>
+</body>
+</html>

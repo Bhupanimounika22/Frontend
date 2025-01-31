@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Context Menu</title>
+  <style>
+  
+#context-menu {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#context-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#context-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#context-menu ul li:hover {
+    background-color: #f2f2f2;
+}
+
+.hidden {
+    display: none;
+}
+#target-element{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+ }
+ p{
+    margin-left: 120px;
+    margin-top: 80px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+ }
+
+  </style>
+</head>
+<body>
+    <div id="context-menu" class="hidden">
+        <ul>
+            <li id="option1">Mounika</li>
+            <li id="option2">Bhaskar</li>
+            <li id="option3">Sai</li>
+        </ul>
+    </div>
+
+    <div id="target-element"><p>Right-click me</p> </div>
+
+    <script>
+        const contextMenu = document.getElementById("context-menu");
+const targetElement = document.getElementById("target-element");
+
+ 
+function showContextMenu(event) {
+    event.preventDefault();
+
+  
+    contextMenu.style.left = `${event.pageX}px`;
+    contextMenu.style.top = `${event.pageY}px`;
+
+    
+    contextMenu.classList.remove("hidden");
+
+  
+    document.addEventListener("click", hideContextMenu);
+}
+
+ 
+function hideContextMenu() {
+    contextMenu.classList.add("hidden");
+    document.removeEventListener("click", hideContextMenu);
+}
+
+ 
+targetElement.addEventListener("contextmenu", showContextMenu);
+
+ 
+document.getElementById("option1").addEventListener("click", () => {
+    alert("Option 1 clicked!");
+    hideContextMenu();
+});
+
+document.getElementById("option2").addEventListener("click", () => {
+    alert("Option 2 clicked!");
+    hideContextMenu();
+});
+
+document.getElementById("option3").addEventListener("click", () => {
+    alert("Option 3 clicked!");
+    hideContextMenu();
+});
+
+    </script> 
+</body>
+</html>

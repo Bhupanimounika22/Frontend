@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+</head>
+<body>
+    <h1>Quiz Application</h1>
+    <div id="question-container">
+        <p id="question-text"></p>
+        <ul id="answer-choices" ></ul>
+    </div>
+    <button id="submit-answer">Submit Answer</button>
+    <p id="result"></p>
+
+    <script>
+        // Define the quiz questions as an array of objects
+        const quizQuestions = [
+            {
+                question: "What is the capital of France?",
+                choices: ["Berlin", "Madrid", "Paris", "Rome"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                choices: ["Earth", "Mars", "Venus", "Jupiter"],
+                correctAnswer: "Mars"
+            },
+            {
+                question: "What is the largest mammal on Earth?",
+                choices: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+                correctAnswer: "Blue Whale"
+            }
+        ];
+
+        // Initialize variables
+        let currentQuestionIndex = 0;
+        const questionText = document.getElementById("question-text");
+        const answerChoices = document.getElementById("answer-choices");
+        const submitAnswerButton = document.getElementById("submit-answer");
+        const resultText = document.getElementById("result");
+
+        // Function to display the current question and answer choices
+        function displayQuestion() {
+            const currentQuestion = quizQuestions[currentQuestionIndex];
+            questionText.textContent = currentQuestion.question;
+            answerChoices.innerHTML = "";
+
+            currentQuestion.choices.forEach(choice => {
+                const listItem = document.createElement("li");
+                listItem.textContent = choice;
+                listItem.addEventListener("click", () => selectAnswer(choice));
+                answerChoices.appendChild(listItem);
+            });
+        }
+
+        // Function to handle user's answer selection
+        function selectAnswer(userChoice) {
+            const currentQuestion = quizQuestions[currentQuestionIndex];
+            if (userChoice === currentQuestion.correctAnswer) {
+                resultText.textContent = "Correct!";
+            } else {
+                resultText.textContent = "Incorrect!";
+            }
+
+            // Move to the next question
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizQuestions.length) {
+                displayQuestion();
+            } else {
+                // Quiz is over
+                questionText.textContent = "Quiz completed!";
+                answerChoices.innerHTML = "";
+                submitAnswerButton.disabled = true;
+            }
+        }
+
+        // Event listener for submitting answers
+        submitAnswerButton.addEventListener("click", () => {
+            const selectedChoice = answerChoices.querySelector("li.selected");
+            if (selectedChoice) {
+                const userChoice = selectedChoice.textContent;
+                selectAnswer(userChoice);
+            }
+        });
+
+        // Initial question display
+        displayQuestion();
+    </script>
+</body>
+</html>

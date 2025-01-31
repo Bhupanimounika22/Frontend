@@ -1,0 +1,151 @@
+body{
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        pink 0%,
+        pink 20%,
+        yellow 40%,
+        yellow 60%,
+        paleturquoise 80%,
+        paleturquoise 100%
+        
+    );
+   
+}
+h1,h3{
+    text-align: center;
+}
+ 
+h2{
+    font-size: 80pt;
+    position: absolute;
+    top: 5%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    h2 {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+    }
+}
+ 
+ 
+#para1{
+    position: absolute;
+    top: 16%;
+    left: 6%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para1 {
+      position: absolute;
+      top: 27.5%;
+      left:24% ;
+    }
+}
+ 
+#para2{
+    position: absolute;
+    top: 27.5%;
+    left: 2%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para2 {
+      position: absolute;
+      top: 40%;
+      left: 13.5%;
+    }
+}
+#img1{
+    width: 430px;
+    height: auto;
+    position: absolute;
+    top: 42%;
+    left: 2%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #img1 {
+      position: absolute;
+      top: 55.5%;
+      left: 13.5%;
+    }
+}
+#para3{
+    position: absolute;
+    top: 74%;
+    left: 2%;
+
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para3 {
+      position: absolute;
+      top: 90%;
+      left: 13.5%;
+    }
+}
+#para4{
+    position: absolute;
+    top: 16%;
+    left: 34.5%;
+
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para4 {
+      position: absolute;
+      top: 113%;
+      left: 13.5%;
+    }
+}
+#para5{
+    position: absolute;
+    top: 42%;
+    left: 34.55%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para5 {
+      position: absolute;
+      top: 141%;
+      left: 13.5%;
+    }
+}
+#para6{
+    position: absolute;
+    top: 81%;
+    left: 34.5%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para6 {
+      position: absolute;
+      top: 222%;
+      left: 13.5%;
+    }
+}
+#img2{
+    width: 430px;
+    position: absolute;
+    top: 18%;
+    left: 70%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #img2 {
+      position: absolute;
+      top: 185%;
+      left: 13.5%;
+      width: 480px;
+    }
+}
+#para7{
+    position: absolute;
+    top: 44%;
+    left: 70%;
+}
+@media screen and (min-width: 480px) and (max-width:600px) {
+    #para7 {
+      position: absolute;
+      top: 242%;
+      left: 13.5%;
+       
+    }
+}
+ 
+
+ 

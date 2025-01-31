@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete Suggestions</title>
+    <style>
+       
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+#suggestions-list {
+    position: absolute;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#suggestions-list li {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#suggestions-list li:hover {
+    background-color: #f2f2f2;
+}
+ 
+input{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+     text-align: center;
+}
+    </style>
+</head>
+<body>
+    <h1>Autocomplete Suggestions</h1>
+    <div class="autocomplete">
+        <input type="text" id="autocomplete-input" placeholder="Type here...">
+        <ul id="suggestions-list"></ul>
+    </div>
+
+    <script>
+   
+const options = ["Ant", "Bat", "Cat", "Date", "Elephant", "Frog", "Grape", "Hen", "Kiwi", "Lemon"];
+
+const inputField = document.getElementById("autocomplete-input");
+const suggestionsList = document.getElementById("suggestions-list");
+
+ function updateSuggestions() {
+    const inputValue = inputField.value.toLowerCase();
+    const filteredOptions = options.filter(option => option.toLowerCase().includes(inputValue));
+
+     suggestionsList.innerHTML = '';
+
+     filteredOptions.forEach(option => {
+        const listItem = document.createElement("li");
+        listItem.textContent = option;
+        listItem.addEventListener("click", () => {
+            inputField.value = option;
+            suggestionsList.innerHTML = '';  
+        });
+        suggestionsList.appendChild(listItem);
+    });
+
+     if (filteredOptions.length > 0) {
+        suggestionsList.style.display = "block";
+    } else {
+        suggestionsList.style.display = "none";
+    }
+}
+
+ inputField.addEventListener("input", updateSuggestions);
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land and Boats Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://c1.wallpaperflare.com/preview/608/164/965/library-books-education-knowledge.jpg');
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgb(211, 210, 196);
+             position: relative;
+             top: 60px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+          
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width:550px;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="date"] {
+            width:550px;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+           
+            background-color:rgb(232, 117, 24) ;
+            color: white;
+            font-weight: 700;
+            font-size: 13pt;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button.cancel {
+            background-color: #bdba1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LEND A BOOK</h1>
+        <form id="land-boat-form">
+            <div class="form-group">
+                <label for="roll-no">Roll Number:</label>
+                <input type="text" id="roll-no" name="roll-no" required>
+            </div>
+            <div class="form-group">
+                <label for="book-no">Book Number:</label>
+                <input type="text" id="book-no" name="book-no" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+                <label for="edition">Edition:</label>
+                <input type="text" id="edition" name="edition" required>
+            </div>
+            <div class="form-group">
+                <label for="issue-date">Issue Date:</label>
+                <input type="date" id="issue-date" name="issue-date" required>
+            </div>
+            <div class="form-group">
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required>
+            </div>
+            <div class="button-container">
+                <button type="button" id="add-button" onclick="myfun()">Add</button>
+                <button type="button" class="cancel" id="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const addButton = document.getElementById('add-button');
+        const landBoatForm = document.getElementById('land-boat-form');
+ 
+function myfun(){
+    alert('You have successfully added');
+}
+           
+  
+        ;
+    </script>
+</body>
+</html>

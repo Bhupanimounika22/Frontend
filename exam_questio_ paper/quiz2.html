@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Application</title>
+    <style>
+        #quiz-container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .choice-container {
+            margin-top: 20px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 10px;
+            display: inline-block;
+
+        }
+        
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1 id="question"></h1>
+        <form id="quiz-form">
+            <div id="choices" class="choice-container"></div>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script >
+        const quizQuestions = [
+    {
+        question: "What is the capital of France?",
+        choices: ["London", "Madrid", "Paris", "Rome"],
+        correctAnswer: "Paris"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        choices: ["Venus", "Mars", "Jupiter", "Saturn"],
+        correctAnswer: "Mars"
+    },
+    {
+        question: "What is the largest mammal on Earth?",
+        choices: ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        correctAnswer: "Blue Whale"
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const quizForm = document.getElementById("quiz-form");
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+const resultElement = document.getElementById("result");
+
+function displayQuestion() {
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+
+    choicesElement.innerHTML = "";
+
+    currentQuestion.choices.forEach((choice, index) => {
+        const choiceLabel = document.createElement("label");
+        choiceLabel.textContent = choice;
+
+        const choiceInput = document.createElement("input");
+        choiceInput.type = "radio";
+        choiceInput.name = "answer";
+        choiceInput.value = choice;
+
+        choiceLabel.appendChild(choiceInput);
+
+        choicesElement.appendChild(choiceLabel);
+    });
+}
+
+function checkAnswer(event) {
+    event.preventDefault();
+    const userChoice = document.querySelector('input[name="answer"]:checked');
+
+    if (userChoice) {
+        if (userChoice.value === quizQuestions[currentQuestionIndex].correctAnswer) {
+            score++;
+        }
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < quizQuestions.length) {
+            displayQuestion();
+        } else {
+            displayResult();
+        }
+    }
+}
+
+function displayResult() {
+    quizForm.style.display = "none";
+    resultElement.textContent = `You scored ${score} out of ${quizQuestions.length}!`;
+}
+
+quizForm.addEventListener("submit", checkAnswer);
+displayQuestion();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beneficiary Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 570px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  input{
+    width: 570px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+select{
+    width: 570px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+  
+
+  #btn1 {
+    background-color: green;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+ #btn1:hover {
+    transform: scale(1.1);
+  }
+  #btn2 {
+    background-color: red;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+ #btn2:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Beneficiary Form</h2>
+    <form action="http://127.0.0.1:5500/lab/assignment1/completed.html">
+      <label for="name">  A/C NO:</label>
+      <input type="text" id="name" name="name" required>
+
+      
+ <label for="phone number">IFSSC</label>
+ <input type="number" id="phnno" maxlength="10" required>
+ <label for="address">Account Name</label>
+ <input type="text" required>
+ <label for="address">Branch</label>
+ <input type="number" name="street no" id="street">
+ 
+ 
+
+      <button type="submit" id="btn1">ADD</button>
+      <button type="reset" id="btn2">Cancel</button>
+
+    </form>
+  </div>
+</body>
+</html>

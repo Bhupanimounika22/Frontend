@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-image: url('https://ggresort.com/wp-content/uploads/sites/62/2021/09/Grand-luxury-Rooms4.jpg');
+    width: 1440px;
+    height: 600px;
+    
+    
+}
+
+.cont{
+    display: flex;
+    background-color: white;
+    width: 1440px;
+     height: 50px;
+}
+.blur{
+    position: absolute;
+    top: 6%;
+    left: 0;
+    -webkit-backdrop-filter: brightness(0.65);
+    width: 1440px;
+    height:550px;
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    margin-top: 15px;
+    padding-left: 60px;
+    position: relative;
+    left: 30%;
+    color: rgb(106, 104, 104);
+    font-size: 13pt;
+    font-weight: 600;
+}
+.btn1{
+    width: 90px;
+    height: 30px;
+    border: none;
+    background-color:rgb(225, 113, 16);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
+    color: aliceblue;
+}
+.btn2{
+    width: 90px;
+    height: 30px;
+    border: 1px solid rgb(225, 113, 16);
+    color: rgb(225, 113, 16);
+    background-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
+
+}
+.img1{
+    width: 100px;
+    height: 50px;
+}
+.H1{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color:rgb(160, 244, 35, 0.9);
+    font-size: 40pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+   
+
+   
+}
+.H2{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 40pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+   
+   
+
+    
+}
+.H3{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 40pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+.para{
+    position: absolute;
+    top: 47%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 15pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgb(194, 191, 191);
+}
+.btn3{
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color:rgb(225, 113, 16);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
+    color: aliceblue;
+}
+.cont2{
+    position: absolute ;
+    top: 80%;
+    left: 40%;
+}
+.cont3{
+    position: absolute ;
+    top: 80%;
+    left: 10%;
+}
+.cont4{
+    position: absolute ;
+    top: 80%;
+    left: 70%;
+}
+.img2{
+    width: 120px;
+    height: 120px;
+}.img3{
+    width: 100px;
+    height: 100px;
+}
+.img4{
+    width: 90px;
+    height: 90px;
+   
+}
